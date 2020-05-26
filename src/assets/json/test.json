@@ -1,0 +1,195 @@
+{
+    "success": true,
+    "order": {
+      "id": "2117155815564",
+      "number": "1003",
+      "marketPlaceId": null,
+      "name": "#1003",
+      "email": null,
+      "fulfillmentStatus": {
+        "id": null,
+        "status": null,
+        "ecartapi": "unfulfilled",
+        "ecartapiId": "3",
+        "partiallAvailable": "true"
+      },
+      "currency": "MXN",
+      "totals": {
+        "subtotal": "2040.00",
+        "total": "2140.00",
+        "tax": "100.00",
+        "discount": "10.00",
+        "weight": "300"
+      },
+      "taxesIncluded": "false",
+      "units": {
+        "weight": "g"
+      },
+      "status": {
+        "id": null,
+        "status": "open",
+        "financial": "paid",
+        "ecartapi": "paid",
+        "ecartapiId": "1"
+      },
+      "locationId": null,
+      "reference": null,
+      "tags": [
+        "imported"
+      ],
+      "payment": null,
+      "customer": null,
+      "billingAddress": {
+        "id": null,
+        "firstName": "Alex",
+        "lastName": "de la Cruz",
+        "address1": "123 Fake Street",
+        "address2": null,
+        "country": {
+          "code": "CA",
+          "name": "Canada",
+          "codeIso2": "CA",
+          "codeIso3": "CAN"
+        },
+        "state": {
+          "code": "ON",
+          "name": "Ontario",
+          "codeIso2": null,
+          "codeIso3": null
+        },
+        "city": "Fakecity",
+        "postalCode": "K2P 1L4",
+        "phone": "555-555-5555",
+        "company": "envia.com",
+        "references": null
+      },
+      "shippingAddress": {
+        "id": null,
+        "firstName": "John",
+        "lastName": "Silver",
+        "address1": "123 Fake Street",
+        "address2": null,
+        "country": {
+          "code": "CA",
+          "name": "Canada",
+          "codeIso2": "CA",
+          "codeIso3": "CAN"
+        },
+        "state": {
+          "code": "ON",
+          "name": "Ontario",
+          "codeIso2": null,
+          "codeIso3": null
+        },
+        "city": "Fakecity",
+        "postalCode": "K2P 1L4",
+        "phone": "555-555-5555",
+        "company": "envia.com",
+        "references": null
+      },
+      "items": [
+        {
+          "id": "4645694505100",
+          "variantId": "32346524450956",
+          "productId": "4591541944460",
+          "sku": null,
+          "fulfillment": {
+            "quantity": "1",
+            "service": "manual",
+            "status": null
+          },
+          "name": "Camisa manga larga",
+          "requiresShipping": "true",
+          "quantity": "1",
+          "price": "250.00",
+          "discount": "0.00",
+          "tax": null,
+          "taxable": "false",
+          "vendor": "ecarttest",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0341/3498/2796/products/camisa.jpg?v=1582591220",
+          "ecartapiUrl": "https://eshop-deve.herokuapp.com/api/v2/products/4591541944460"
+        },
+        {
+          "id": "4645694537868",
+          "variantId": "33075935150220",
+          "productId": "4789655240844",
+          "sku": null,
+          "fulfillment": {
+            "quantity": "1",
+            "service": "manual",
+            "status": null
+          },
+          "name": "Tenis blancos",
+          "requiresShipping": "true",
+          "quantity": "1",
+          "price": "800.00",
+          "discount": "0.00",
+          "tax": null,
+          "taxable": "false",
+          "vendor": "ecarttest",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0341/3498/2796/products/tenisblancos.jpg?v=1585776720",
+          "ecartapiUrl": "https://eshop-deve.herokuapp.com/api/v2/products/4789655240844"
+        },
+        {
+          "id": "4645694570636",
+          "variantId": "33075678544012",
+          "productId": "4789562048652",
+          "sku": null,
+          "fulfillment": {
+            "quantity": "1",
+            "service": "manual",
+            "status": null
+          },
+          "name": "Tenis negros",
+          "requiresShipping": "true",
+          "quantity": "1",
+          "price": "1000.00",
+          "discount": "0.00",
+          "tax": null,
+          "taxable": "false",
+          "vendor": "ecarttest",
+          "imageUrl": "https://cdn.shopify.com/s/files/1/0341/3498/2796/products/tenis.jpg?v=1585775299",
+          "ecartapiUrl": "https://eshop-deve.herokuapp.com/api/v2/products/4789562048652"
+        }
+      ],
+      "meta": null,
+      "dates": {
+        "canceledAt": null,
+        "closedAt": null,
+        "createdAt": "2020-04-03T12:53:24-04:00",
+        "updatedAt": "2020-04-03T12:53:24-04:00"
+      },
+      "cancelReason": null,
+      "note": null,
+      "checkoutId": null,
+      "page": {
+        "next": null,
+        "previous": null
+      },
+      "locations": [
+        {
+          "id": "40947253388",
+          "locationName": "Belisario Dominguez 2470",
+          "address1": "Belisario Dominguez 2470",
+          "address2": null,
+          "country": {
+            "code": "MX",
+            "name": "MX",
+            "codeIso2": "MX",
+            "codeIso3": "MEX"
+          },
+          "state": {
+            "code": "NL",
+            "name": "Nuevo León",
+            "codeIso2": null,
+            "codeIso3": null
+          },
+          "city": "Monterrey",
+          "postalCode": "64060",
+          "phone": null,
+          "company": null,
+          "references": null
+        }
+      ]
+    }
+  }
