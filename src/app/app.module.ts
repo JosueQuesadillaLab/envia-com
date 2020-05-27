@@ -8,6 +8,7 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BestSellersComponent } from './dashboard/best-sellers/best-sellers.component';
 import { BannerHomeComponent } from './dashboard/banner-home/banner-home.component';
+import { ProductComponent } from './dashboard/product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BannerHomeComponent } from './dashboard/banner-home/banner-home.compone
     MenuComponent,
     FooterComponent,
     BestSellersComponent,
-    BannerHomeComponent
+    BannerHomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
