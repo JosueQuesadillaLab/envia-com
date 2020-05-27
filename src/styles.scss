@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+$textgreen: #90968a;
 $background-green: #90968a;
 $background-white: #f6f6f6;
 $background-gray: #edece8 ;
@@ -12,6 +13,7 @@ $background-gray: #edece8 ;
 //Buttons
 
 .btn{
+    outline: 0;
     
     &.btn-white{
         letter-spacing: 2px;
@@ -20,14 +22,42 @@ $background-gray: #edece8 ;
         color: white;
         padding: 15px 30px;
 
+        &:active , &:hover{
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
         
     }
 
-    &:active , &:hover{
-        background-color: white;
-        color: black;
-        border-color: black;
+
+
+    &.btn-black{
+        font-size: .6em;
+        letter-spacing: 2px;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+        padding: 6px 20px;
+        margin-top: 10px;
+        margin-left: 5%;
+
+        &:active , &:hover{
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
     }
+
+    &:focus , &:active , &:hover{
+        outline: 0;
+    }
+
+
+
+    
+
+    
 
 }
 
@@ -65,6 +95,67 @@ $background-gray: #edece8 ;
         min-height: 350px;
     }
 
+}
+
+
+//Best Sellers
+
+.bestSellers{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    h3{
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .bestSellets-card{
+
+        padding-bottom: 60px;
+
+        .bestSellers-mark{    
+            font-weight: 500;
+            font-size: .7em;
+            top: 10px;
+            left: 50px;
+            display: block;
+            position: absolute;
+            padding: 5px 15px;
+            border: 1px solid $textgreen;
+            color: $textgreen;;
+        }
+    
+        .bestSellers-img{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+    
+        p{
+            width: 90%;
+            margin: 0 auto;
+    
+            &.product-category{
+                font-weight: 300;
+                font-size: .8em;
+            }
+    
+            &.product-title{
+                font-weight: 500;
+                font-size: 1.2em;
+                letter-spacing: 2px;
+            }
+            &.product-prize{
+                font-weight: 800;
+                font-size: 1em;
+            }
+        }
+
+    }
+
+    
 }
 
 
@@ -170,7 +261,7 @@ $background-gray: #edece8 ;
     .banner{
         
         height: 80vh;
-        // background-image: url("assets/img/yoel-peterson-4VJIGu1cV-c-unsplash.jpg");
+        background-image: url("assets/img/gabrielle-henderson-_0oCrcsVShU-unsplash.jpg");
         background-position: 20% center;
 
         h2{
