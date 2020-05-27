@@ -26,8 +26,6 @@ export class ProductsService {
 
   getOrder(){
     
-    console.log(this.apiurl);
-
     return this.http.get( this.apiurl , this.httpOptions );
 
   }
