@@ -24,13 +24,12 @@ export class BestSellersComponent implements OnInit , OnDestroy {
 
   ngOnInit() {
 
-    this.itemsSubscription = this.store.select('items').pipe(
-      filter ( itemsList => itemsList.items != null) 
+    this.itemsSubscription = this.store.select('products').pipe(
+      filter ( productList => productList.products != null) 
     ).subscribe(
-      itemsList => {
-          const { items } = itemsList;
-          this.productsList = items;
-          console.log(this.productsList);
+      productList => {
+          const { products } = productList;
+          this.productsList = products;
       }
   );
     
