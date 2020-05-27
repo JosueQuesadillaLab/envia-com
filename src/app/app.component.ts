@@ -41,6 +41,17 @@ export class AppComponent implements OnInit , OnDestroy{
       }
     );
 
+    
+    this._productService.getProducts().subscribe(
+      resp =>{
+
+        this.store.dispatch( actions.setProducts( { products: resp }) );
+
+      }
+    );
+
+
+
   }
 
 

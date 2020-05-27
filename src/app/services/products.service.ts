@@ -12,6 +12,7 @@ import { environment } from './../../environments/environment';
 export class ProductsService {
 
   private apiurl = environment.apiurl;
+  private apiproducts = environment.apiProducts;
 
   private httpOptions = {
     headers: new HttpHeaders({
@@ -23,6 +24,10 @@ export class ProductsService {
   constructor(
     private http: HttpClient
   ) { }
+
+  getProducts(){
+    return this.http.get( this.apiproducts , this.httpOptions);
+  }
 
   getOrder(){
     
