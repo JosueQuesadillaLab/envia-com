@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+$textgray: #c4c4c4; 
 $textgreen: #90968a;
+$textdarkgreen: #444c44;
 $background-green: #90968a;
 $background-white: #f6f6f6;
 $background-gray: #edece8 ;
@@ -47,6 +48,21 @@ $background-gray: #edece8 ;
             color: black;
             border-color: black;
         }
+
+        &.btn-add-product{
+            font-size: .8em;
+            padding: 20px;
+            display: block;
+            width: 100%;
+            margin:  0 auto;
+        }
+    }
+
+
+    &.btn-qty{
+        border: 1px solid black;
+        border-radius: 0px;
+        margin-bottom: 20px;
     }
 
     &:focus , &:active , &:hover{
@@ -54,10 +70,6 @@ $background-gray: #edece8 ;
     }
 
 
-
-    
-
-    
 
 }
 
@@ -69,11 +81,14 @@ $background-gray: #edece8 ;
     background-color: white;
     padding-top: 20px;
     padding-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)!important;
     .menu-icon{
         font-size: 1.5em;
     }
 }
 
+
+//HOME
 
 //Banner Home
 
@@ -160,6 +175,83 @@ $background-gray: #edece8 ;
 
 
 
+//PRODUCT 
+
+.product-main{
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    p{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .product-title{
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+
+    .product-prize{
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+
+    .product-img{
+        padding-bottom: 20px;
+    }
+
+    .product-sku{
+        text-align: center;
+        font-size: .7em;
+        color: $textgreen;
+        padding-bottom: 5px;
+    }
+
+    .product-size{
+
+        color: $textdarkgreen;
+        text-align: center;
+        font-size: .8em;
+        padding-bottom: 20PX;
+
+    }
+
+    .product-description{        
+        color: $textdarkgreen;
+        font-weight: 300;
+        text-align: justify;
+        line-height: 1.2;
+        padding-bottom: 30px;
+
+    }
+
+    .product-qty{
+        text-align: center;
+        padding-bottom: 30px;
+        p{
+            font-weight: 500;
+            span{
+                font-weight: 700;
+            }
+        }
+        .product-details{
+            text-align: right;
+            font-weight: 500;
+            font-size: .6em;
+            padding-top: 20px;
+            padding-right: 15px;
+        }
+    }
+
+
+    
+
+
+}
+
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
@@ -193,6 +285,52 @@ $background-gray: #edece8 ;
         }
 
     }
+
+
+    //PRODUCT 
+
+    .product-main{
+        padding-top: 70px;
+
+        .product-title{
+            font-size: 2em;
+            letter-spacing: 3px;
+            padding-bottom: 40px;
+        }
+
+        .product-prize{
+            font-size: 2.4em;
+        }
+
+        .product-img{
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-sku{
+            font-size: 1.2em;
+        }
+
+        .product-size{
+            font-size: 1.8em;
+        }
+
+        .product-description{        
+            padding-top: 40px;
+        }
+
+        .product-qty{
+            padding-top: 20px;
+            p{                
+                padding-bottom: 20px;
+            }
+        }
+
+
+    }   
+
+
 
 
  }
@@ -246,6 +384,50 @@ $background-gray: #edece8 ;
         }
 
     }
+
+     
+    //PRODUCT 
+
+     .product-main{
+        padding-top: 40px;
+
+        .product-title{
+            font-size: 1.2em;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .product-prize{
+            font-size: 1.4em;
+        }
+
+        .product-img{
+            width: 85%;
+        }
+
+        .product-sku{
+            text-align: left;
+            font-size: .8em;
+        }
+
+        .product-size{
+            text-align: left;
+            font-size: 1em;
+        }
+
+        .product-description{        
+            padding-top: 10px;
+        }
+
+        .product-qty{
+            padding-top: 0px;
+            p{                
+                padding-bottom: 10px;
+            }
+        }
+
+
+    }   
     
 
  }
@@ -274,5 +456,46 @@ $background-gray: #edece8 ;
         }
 
     }
+
+
+    //PRODUCT 
+
+    .product-main{
+        padding-top: 80px;
+
+        .product-title{
+            font-size: 1.2em;
+            padding-bottom: 70px;
+        }
+
+        .product-prize{
+            font-size: 1.2em;
+        }
+
+        .product-img{
+            width: 90%;
+        
+        }
+
+        .product-sku{
+            font-size: 0.8em;
+        }
+
+        .product-size{
+            font-size: 0.9em;
+        }
+
+        
+        .product-qty{
+            padding-top: 0px;
+            p{                
+                padding-bottom: 10px;
+            }
+        }
+
+
+    } 
+
+
 
  }
