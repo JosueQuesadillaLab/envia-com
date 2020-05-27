@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from './store/app.reducer';
 import * as actions from './store/actions';
-import { ClassField } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-root',
@@ -27,9 +27,7 @@ export class AppComponent implements OnInit , OnDestroy{
 
     this.orderSubscription = this._productService.getOrder().subscribe(
       resp => {
-        
-        console.log(resp);
-        
+              
         this.store.dispatch( actions.setOrder( { data: resp }) );
 
         this.items = resp;
@@ -38,11 +36,7 @@ export class AppComponent implements OnInit , OnDestroy{
         const { items } = order;
         const { id } = order;
 
-
         this.store.dispatch( actions.setItems( { items: items }) );
-
-        console.log(order , id , items);
-
 
       }
     );

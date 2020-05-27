@@ -6,14 +6,14 @@
                 <!-- Mobile -->
 
                 <div class="col-8 text-left d-block d-lg-none">
-                    <p class="product-title">L/S Henley Curve-Hem</p>
+                    <p *ngIf="product" class="product-title">{{this.product.name}}</p>
                 </div>
                 <div class="col-4 text-right d-block d-lg-none">
-                    <p class="product-prize">$68</p>
+                    <p *ngIf="product" class="product-prize">$ {{this.product.price}}</p>
                 </div>
                 
                 <div class="col-12">
-                    <img src="https://cdn.shopify.com/s/files/1/0341/3498/2796/products/tenis.jpg?v=1585775299" class="product-img img-fluid">
+                    <img *ngIf="product" src="{{this.product.imageUrl}}" class="product-img img-fluid">
                 </div>
 
 
@@ -25,25 +25,25 @@
                 <!-- Desktop -->
 
                 <div class="col-lg-8 text-left d-none d-lg-block">
-                    <p class="product-title">L/S Henley Curve-Hem</p>
+                    <p *ngIf="product" class="product-title">{{this.product.name}}</p>
                 </div>
                 <div class="col-lg-4 text-right d-none d-lg-block">
-                    <p class="product-prize">$68</p>
+                    <p *ngIf="product" class="product-prize">$ {{this.product.price}}</p>
                 </div>
 
                 <div class="col-12">
-                    <p class="product-sku">SKU: {{id}}</p>
+                    <p *ngIf="product" class="product-sku">SKU: {{this.product.sku}}</p>
                     <p class="product-size">Talla : 9 US <span>Size Guide</span></p>                    
                 </div>
                 <div class="col-12 col-md-6 col-lg-12">
                     <p class="product-description">This long sleeve henley is paired with our original curve-hem giving a classic an elevated bottom cut to reduce bunching around the waist.</p>
                 </div>
-                <div class="col-lg-2"></div>    
+                <div class="col-lg-2 d-none d-lg-block"></div>    
                 <div class="col-12 col-md-6 col-lg-8 product-qty">
                     <button class="btn btn-qty" (click)="rest()">-</button>
                     <button class="btn btn-qty" (click)="add()">+</button>
                     <p>Quantity : <span>{{qty}} </span> </p>
-                    <button class="btn btn-black btn-add-product"> Add To Cart</button>
+                    <button (click)="addProduct()" class="btn btn-black btn-add-product"> Add To Cart</button>
                     <p class="product-details">Free Shipping + Free Returns</p>
                 </div>
 

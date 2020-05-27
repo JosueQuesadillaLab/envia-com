@@ -10,6 +10,15 @@ $background-gray: #edece8 ;
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    position: relative;
+}
+
+//Shadows
+
+.shadow{
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)!important;
+}
 
 //Buttons
 
@@ -56,6 +65,16 @@ $background-gray: #edece8 ;
             width: 100%;
             margin:  0 auto;
         }
+
+        &.btn-checkout{
+            font-size: 1em;            
+            margin: 0 auto;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 70px;
+            display: block;
+            width: 100%;
+        }
     }
 
 
@@ -81,7 +100,6 @@ $background-gray: #edece8 ;
     background-color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)!important;
     .menu-icon{
         font-size: 1.5em;
     }
@@ -245,8 +263,148 @@ $background-gray: #edece8 ;
     }
 
 
-    
+}
 
+
+//Cart Shopping
+
+.cart-panel{
+    display: block;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 8888;    
+    .line{
+        border-bottom: 1px solid $textgreen
+    }
+    .cart-title{
+        font-size: 1em;
+        font-weight: 300;
+        letter-spacing: 2px;
+        display: block;
+        padding: 20px;
+        i{
+            padding-right: 5px;
+        }
+    }
+    .cart-text1{
+        font-size: 1.1em;
+        font-weight: 300;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .cart-text2{
+        font-weight: 400;
+        padding-left: 20px;
+        text-decoration: underline;
+    }
+
+    .cart-main{
+        padding-top: 40px;
+        border-bottom: 1px solid $textgreen;
+        .order-number{
+            text-align: right;
+            font-size: 0.8em;
+            color: $textgreen;
+            text-decoration: underline;
+        }
+        .cart-product-panel{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            position: relative;
+            .close{
+                font-size: 1em;
+                font-weight: 300;
+                top: 10px;
+                right: 20px;
+                padding: 10px;
+                position: absolute;
+                display: block;
+            }
+            .cart-qty{
+                font-size: .7em;
+                letter-spacing: 2px;
+                border: 1px solid $textgreen;
+                padding: 10px 7px;
+                width: 100px;
+                span{
+                    float: right;
+                    padding-right: 10px;
+                }
+            }
+            .product-title{
+                font-weight: 500;
+                font-size: 0.8em;
+                line-height: 1.2;
+                letter-spacing: 2px;
+            }
+
+            .product-sku{
+                padding-top: 0px;
+                margin-bottom: 10px;
+                font-weight: 300;
+                font-size: 0.6em;
+                line-height: 1.2;
+            }
+
+            .product-prize{
+                display: block;
+                margin-top: 30px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    .order-subtotal {
+        font-size: 0.9em;            
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+        span{
+            font-size: 1.2em;
+            font-weight: 500;
+            float: right;
+        }
+    }
+
+    .order-tax {
+        
+        padding: 0px;        
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        span{
+            
+            font-size: 1.2em;
+            font-weight: 500;
+            float: right;
+        }
+    }
+
+    .order-total{
+        margin-bottom: 10px;
+        padding: 0px;        
+        font-weight: 300;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 15px;
+        span{
+            
+            font-size: 1.2em;
+            font-weight: 500;
+            float: right;
+        }
+    }
 
 }
 
@@ -329,6 +487,14 @@ $background-gray: #edece8 ;
 
 
     }   
+
+
+    .cart-panel{
+        border-left: 1px solid black;
+        width: 50%;
+        right: 0px;
+        left: inherit;
+    }
 
 
 
@@ -425,9 +591,14 @@ $background-gray: #edece8 ;
                 padding-bottom: 10px;
             }
         }
-
-
     }   
+
+
+    .cart-panel{
+        width: 40%;
+        right: 0px;
+        left: inherit;
+    }
     
 
  }
@@ -495,6 +666,13 @@ $background-gray: #edece8 ;
 
 
     } 
+
+
+
+    .cart-panel{
+        width: 33%;
+        max-width: 400px;
+    }
 
 
 

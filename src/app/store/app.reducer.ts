@@ -4,11 +4,13 @@ import * as reducers from './reducers';
 
 export interface AppState {
     order: reducers.OrderState,
-    items: reducers.ItemsState
+    items: reducers.ItemsState,
+    cart: reducers.CartState
 }
 
 
 export const appReducers: ActionReducerMap<AppState> = {
    order: reducers.orderReducer,
-   items: reducers.itemsReducer
+   items: reducers.itemsReducer,
+   cart: reducers.cartReducer
 }

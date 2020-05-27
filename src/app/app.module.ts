@@ -18,6 +18,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BestSellersComponent } from './dashboard/best-sellers/best-sellers.component';
 import { BannerHomeComponent } from './dashboard/banner-home/banner-home.component';
 import { ProductComponent } from './dashboard/product/product.component';
+import { CartComponent } from './shared/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductComponent } from './dashboard/product/product.component';
     FooterComponent,
     BestSellersComponent,
     BannerHomeComponent,
-    ProductComponent
+    ProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ export const initialItemsState: ItemsState = {
 
 const _itemsReducer = createReducer(initialItemsState,
 
-    on(setItems, (state , {items}) => ({ ...state, items: items})),
+    on(setItems, (state , {items}) => ({ ...state, items:items })),
     on(unSetItems, state => ({ ...state, items:null})),
     
 );
