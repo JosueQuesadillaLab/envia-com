@@ -45,7 +45,8 @@
                 <p class="order-total">Total:  <span>{{subtotal + tax | currency }}</span></p>                
             </div>
             <div *ngIf="productsList.length != 0" class="col-12">
-                <button class="btn btn-black btn-checkout">Checkout</button>
+                <button *ngIf="!findemo" (click)="findemo = true" class="btn btn-black btn-checkout">Checkout</button>
+                <button *ngIf="findemo" class="btn btn-black btn-checkout">Hasta aquí llega el DEMO :)</button>
             </div>
                        
         </div>

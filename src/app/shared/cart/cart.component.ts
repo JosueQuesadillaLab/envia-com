@@ -18,6 +18,7 @@ export class CartComponent implements OnInit , OnDestroy{
   productsList : Array<any>;
   orderNumber: number = 0 ;
   cartSubscription : Subscription = new Subscription();
+  findemo : boolean = false;
 
   total: any;
   subtotal : any = 0 ;
@@ -71,10 +72,15 @@ export class CartComponent implements OnInit , OnDestroy{
 
 
 
-  deleteProducto( index ){
+  deleteProducto( i ){
 
+    console.log(i);
 
-    const filteredItems = this.productsList.slice(0, 0).concat(this.productsList.slice(0 + 1, this.productsList.length))
+    console.log(this.productsList);
+
+    const filteredItems = this.productsList.slice(0, i).concat(this.productsList.slice(i + 1, this.productsList.length))
+
+    console.log(filteredItems);
     
     this.store.dispatch ( actions.setItems ( { items: filteredItems }) ) ;
 
