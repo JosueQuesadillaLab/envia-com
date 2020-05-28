@@ -91,7 +91,6 @@ export class ProductComponent implements OnInit , OnDestroy {
 
         if( productId == this.id){
           this.product = product;
-          console.log(this.product);
         }
         
       }

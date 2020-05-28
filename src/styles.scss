@@ -6,6 +6,8 @@ $textdarkgreen: #444c44;
 $background-green: #90968a;
 $background-white: #f6f6f6;
 $background-gray: #edece8 ;
+$background-black: #1d1d1b ;
+
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -29,7 +31,7 @@ body{
 //Buttons
 
 .btn{
-    outline: 0;
+    outline: 0;    
     
     &.btn-white{
         letter-spacing: 2px;
@@ -37,6 +39,7 @@ body{
         border: 1px solid white;
         color: white;
         padding: 15px 30px;
+        border-radius: 0px;
 
         &:active , &:hover{
             background-color: white;
@@ -53,10 +56,12 @@ body{
         letter-spacing: 2px;
         background-color: black;
         border: 1px solid white;
+        border-radius: 0px;
         color: white;
-        padding: 6px 20px;
+        padding: 10px 25px;
         margin-top: 10px;
         margin-left: 5%;
+        
 
         &:active , &:hover{
             background-color: white;
@@ -90,9 +95,24 @@ body{
         margin-bottom: 20px;
     }
 
+
+
+    &.promotions-btn{
+
+        border-radius: 0px;
+        border: 1px solid white;
+        position: absolute;
+        left: 30px;
+        bottom: 10px;
+    }
+
+
+
     &:focus , &:active , &:hover{
         outline: 0;
     }
+
+    
 
 
 
@@ -144,6 +164,7 @@ body{
     padding-bottom: 60px;
 
     h3{
+        color:$textdarkgreen;
         font-weight: 500;
         margin-bottom: 50px;
     }
@@ -273,7 +294,19 @@ body{
 
 
 //Cart Shopping
-
+.backblack{
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 7777;
+}
 .cart-panel{
     display: block;
     position: fixed;
@@ -418,6 +451,63 @@ body{
 }
 
 
+//Promotions
+
+.promotions{
+    padding-top: 60px;
+    padding-bottom: 60px;    
+}
+
+
+
+//Footer
+
+.footer{
+    background-color: $background-black;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: white;
+    h3{        
+        font-size: 2em;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 3px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    h4{
+        font-size: 1em;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .footer-ul{
+        margin: 0;
+        padding-bottom: 40px;
+        padding-left: 10px;
+        li{
+            font-weight: 300;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .copyright{
+        font-size: 0.5em;
+        padding-top: 40px;
+    }
+
+    .footer-social{
+        color: white;
+        margin-right: 30px;
+    }
+}
+
+
+
+
 
 
 // Small devices (landscape phones, 576px and up)
@@ -503,6 +593,11 @@ body{
         width: 50%;
         right: 0px;
         left: inherit;
+        .cart-main{
+            max-height: 650px;
+            overflow-y: scroll;
+        }
+        
     }
 
 
@@ -538,6 +633,7 @@ body{
                 display: inline;
                 padding-right: 15px;
                 a{
+                    color:$textdarkgreen;
                     cursor: pointer;
                 }
             }
@@ -626,7 +722,7 @@ body{
     .banner{
         
         height: 80vh;
-        background-image: url("assets/img/banner/gabrielle-henderson-_0oCrcsVShU-unsplash.jpg");
+        background-image: url("assets/img/banner/clem-onojeghuo-iuvLYv85r40-unsplash.jpg");
         background-position: 20% center;
 
         h2{
