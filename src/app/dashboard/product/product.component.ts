@@ -8,8 +8,6 @@ import * as actions from '../../store/actions';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
-
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -21,8 +19,11 @@ export class ProductComponent implements OnInit , OnDestroy {
   qty: number = 0 ;
   productsList : Array<any>;
   product : any  = null ;
+  itemsProducts : Array<any>;
   
   itemsSubscription : Subscription = new Subscription();
+  rutaSubscription : Subscription = new Subscription();
+
 
   constructor(
     private route: ActivatedRoute,
@@ -32,26 +33,40 @@ export class ProductComponent implements OnInit , OnDestroy {
   ngOnInit() {
     
 
-    this.itemsSubscription = this.store.select('items').pipe(
-        filter ( itemsList => itemsList.items != null) 
+    this.itemsSubscription = this.store.select('products').pipe(
+        filter ( itemsList => itemsList.products != null) 
       ).subscribe(
         itemsList => {
-            const { items } = itemsList;
-            this.productsList = items;
+            const { products } = itemsList;
+            this.productsList = products;
 
-            this.route.paramMap.subscribe(params => {
+            this.rutaSubscription = this.route.paramMap.subscribe(params => {
               this.id = params.get("id");
               this.getDataProduct();
             });
-
-
         }
     );
+
+
+
+    this.store.select('items').pipe(
+      filter ( items => items.items != null)
+    ).subscribe(
+      resp => {
+        
+        const { items }  = resp;
+        this.itemsProducts = items;
+
+      }
+    );
+
+
 
   }
 
   ngOnDestroy(){
     this.itemsSubscription.unsubscribe();
+    this.rutaSubscription.unsubscribe();
   }
 
   rest(){
@@ -114,13 +129,9 @@ export class ProductComponent implements OnInit , OnDestroy {
       "ecartapiUrl": "https://eshop-deve.herokuapp.com/api/v2/products/4591541944460"
     }
 
-  
-    
-
-    
 
 
-    this.productsList.map( resp => 
+    this.itemsProducts.map( resp => 
        {
         array.push(resp);
        }

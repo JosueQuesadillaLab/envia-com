@@ -43,7 +43,6 @@ export class CartComponent implements OnInit , OnDestroy{
         const { order } = data;
         const { id } = order;
         this.orderNumber = id;
-
       }
     );
 
@@ -52,13 +51,9 @@ export class CartComponent implements OnInit , OnDestroy{
     ).subscribe(
       itemsList => {
         
-        
         const { items } = itemsList;
         this.productsList = items;
-
         this.getTotal(this.productsList);
-
-
 
       }
     );
@@ -76,6 +71,20 @@ export class CartComponent implements OnInit , OnDestroy{
   }
 
 
+
+  deleteProducto( index ){
+
+
+    const filteredItems = this.productsList.slice(0, 0).concat(this.productsList.slice(0 + 1, this.productsList.length))
+    
+    this.store.dispatch ( actions.setItems ( { items: filteredItems }) ) ;
+
+  }
+
+
+  //Obtener Total 
+
+
   getTotal( items ){
 
     this.subtotal = 0 ;
@@ -91,3 +100,5 @@ export class CartComponent implements OnInit , OnDestroy{
   }
 
 }
+
+

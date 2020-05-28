@@ -21,7 +21,6 @@ export class MenuComponent implements OnInit {
   }
 
   openCartShopping(){
-    console.log("click")
     this.store.dispatch( actions.openCart() );
   }
 

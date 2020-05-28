@@ -18,6 +18,11 @@ export class AppComponent implements OnInit , OnDestroy{
   orderSubscription : Subscription = new Subscription();
   items : any = [];
 
+  onActivate(event) {
+    window.scroll(0,0);
+  }
+
+
   constructor(
     private _productService : ProductsService,
     public store : Store<AppState>

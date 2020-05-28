@@ -289,6 +289,7 @@ body{
         letter-spacing: 2px;
         display: block;
         padding: 20px;
+        cursor: pointer;
         i{
             padding-right: 5px;
         }
@@ -323,9 +324,11 @@ body{
                 font-weight: 300;
                 top: 10px;
                 right: 20px;
-                padding: 10px;
+                padding: 12px;
                 position: absolute;
                 display: block;
+                cursor: pointer;
+                z-index: 7000;
             }
             .cart-qty{
                 font-size: .7em;
@@ -528,8 +531,11 @@ body{
             .menu-li{
                 display: inline;
                 padding-right: 15px;
+                a{
+                    cursor: pointer;
+                }
             }
-
+        
         }
     }
 

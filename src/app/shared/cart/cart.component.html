@@ -4,17 +4,18 @@
             <div class="col-12 line">
                 <a (click)="closeCart()" class="cart-title"> <i class="fas fa-long-arrow-alt-left"></i>  Your Shopping Cart</a>
             </div>
-            <!-- <div class="col-12">
+            
+            <div *ngIf="productsList.length == 0" class="col-12">
                 <p class="cart-text1">Your cart is currently empty</p>
-                <a class="cart-text2">Browse All</a>
-            </div> -->
+                <a [routerLink]="['/home']" class="cart-text2">Browse All</a>
+            </div>
 
-            <div class="cart-main">
+            <div *ngIf="productsList.length != 0" class="cart-main">
                 <div class="col-12">
                     <p class="order-number">Order Number: {{orderNumber}}</p>
                 </div>
-                <div *ngFor="let product of productsList" class="col-12 cart-product-panel">
-                    <div class="close">x</div>
+                <div *ngFor="let product of productsList; let i = index" class="col-12 cart-product-panel">
+                    <div  (click)="deleteProducto(i)" class="close">x</div>
                     <div class="row">
                         <div class="col-5">
                             <img src="{{product.imageUrl}}" alt="" class="img-fluid">
@@ -35,12 +36,12 @@
                 </div>          
             </div>  
                     
-            <div class="col-12">
+            <div *ngIf="productsList.length != 0" class="col-12">
                 <p class="order-subtotal">Subtotal: <span>{{subtotal | currency}}</span></p>
                 <p class="order-tax">Tax: <span>{{tax | currency}}</span></p>
                 <p class="order-total">Total:  <span>{{subtotal + tax | currency }}</span></p>                
             </div>
-            <div class="col-12">
+            <div *ngIf="productsList.length != 0" class="col-12">
                 <button class="btn btn-black btn-checkout">Checkout</button>
             </div>
                        

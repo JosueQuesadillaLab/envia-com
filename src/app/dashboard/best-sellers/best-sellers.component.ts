@@ -39,4 +39,8 @@ export class BestSellersComponent implements OnInit , OnDestroy {
     this.itemsSubscription.unsubscribe();
   }
 
+  up(){
+    window.scroll(0,0);
+  }
+
 }
