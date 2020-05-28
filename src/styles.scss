@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+$danger : red;
 $textgray: #c4c4c4; 
 $textgreen: #90968a;
 $textdarkgreen: #444c44;
@@ -18,6 +19,11 @@ body{
 
 .shadow{
     box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06)!important;
+}
+
+//validation 
+.danger{
+    color: $danger;
 }
 
 //Buttons

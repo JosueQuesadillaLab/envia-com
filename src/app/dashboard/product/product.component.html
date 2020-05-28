@@ -42,8 +42,9 @@
                 <div class="col-12 col-md-6 col-lg-8 product-qty">
                     <button class="btn btn-qty" (click)="rest()">-</button>
                     <button class="btn btn-qty" (click)="add()">+</button>
-                    <p>Quantity : <span>{{qty}} </span> </p>
-                    <button (click)="addProduct()" class="btn btn-black btn-add-product"> Add To Cart</button>
+                    <p [ngClass]="{'danger': flagValidation}">Quantity : <span>{{qty}} </span> </p>
+                    <button *ngIf="!sending" (click)="addProduct()" class="btn btn-black btn-add-product"> Add To Cart</button>
+                    <button *ngIf="sending"  class="btn btn-black btn-add-product"> <i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Adding...</button>
                     <p class="product-details">Free Shipping + Free Returns</p>
                 </div>
 

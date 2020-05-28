@@ -20,6 +20,8 @@ export class ProductComponent implements OnInit , OnDestroy {
   productsList : Array<any>;
   product : any  = null ;
   itemsProducts : Array<any>;
+  sending: boolean = false;
+  flagValidation = false;
   
   itemsSubscription : Subscription = new Subscription();
   rutaSubscription : Subscription = new Subscription();
@@ -39,7 +41,6 @@ export class ProductComponent implements OnInit , OnDestroy {
         itemsList => {
             const { products } = itemsList;
             this.productsList = products;
-
             this.rutaSubscription = this.route.paramMap.subscribe(params => {
               this.id = params.get("id");
               this.getDataProduct();
@@ -52,11 +53,9 @@ export class ProductComponent implements OnInit , OnDestroy {
     this.store.select('items').pipe(
       filter ( items => items.items != null)
     ).subscribe(
-      resp => {
-        
+      resp => {  
         const { items }  = resp;
         this.itemsProducts = items;
-
       }
     );
 
@@ -70,16 +69,16 @@ export class ProductComponent implements OnInit , OnDestroy {
   }
 
   rest(){
-    
     if(this.qty > 0){
       this.qty--;
+      this.flagValidation = false;
     }
-    
   }
 
   add(){ 
     if(this.qty < 10){
       this.qty++;
+      this.flagValidation = false;
     }
   }
 
@@ -92,6 +91,7 @@ export class ProductComponent implements OnInit , OnDestroy {
 
         if( productId == this.id){
           this.product = product;
+          console.log(this.product);
         }
         
       }
@@ -101,32 +101,35 @@ export class ProductComponent implements OnInit , OnDestroy {
 
   addProduct(){
 
-    if( this.qty == 0 ){      
+    if( this.qty == 0 ){  
+      this.flagValidation = true;
       return;
     }
+
+    this.sending = true;
 
     let array = [];
   
     const obproduct = {
-      "id": "4645694505100",
-      "variantId": "32346524450956",
-      "productId": "4591541944460",
-      "sku": null,
-      "fulfillment": {
-        "quantity": "1",
-        "service": "manual",
-        "status": null
+      'id': `${this.product.id}`,
+      'variantId': '32346524450956',
+      'productId': `${this.product.productId}`,
+      'sku': `${this.product.sku}`,
+      'fulfillment': {
+        'quantity': '1',
+        'service': 'manual',
+        'status': null
       },
-      "name": "Camisa manga larga",
-      "requiresShipping": "true",
-      "quantity": `${this.qty}`,
-      "price": "250.00",
-      "discount": "0.00",
-      "tax": null,
-      "taxable": "false",
-      "vendor": "ecarttest",
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0341/3498/2796/products/camisa.jpg?v=1582591220",
-      "ecartapiUrl": "https://eshop-deve.herokuapp.com/api/v2/products/4591541944460"
+      'name': `${this.product.name}`,
+      'requiresShipping': 'true',
+      'quantity': `${this.qty}`,
+      'price': `${this.product.price}`,
+      'discount': '0.00',
+      'tax': null,
+      'taxable': 'false',
+      'vendor': 'ecarttest',
+      'imageUrl': `${this.product.imageUrl}`,
+      'ecartapiUrl': 'https://eshop-deve.herokuapp.com/api/v2/products/4591541944460'
     }
 
 
@@ -140,6 +143,12 @@ export class ProductComponent implements OnInit , OnDestroy {
     array.push(obproduct);
     
     this.store.dispatch( actions.setItems( { items: array }) );
+    this.store.dispatch( actions.openCart());
+
+    this.sending = false; 
+    this.qty = 0;
+    
+    
 
   }
 
