@@ -44,6 +44,7 @@
                 <li class="menu-li">
                     <a (click)="openCartShopping()">
                         <i class="fas fa-shopping-cart menu-icon"></i>
+                        <span *ngIf="numberProducts != 0">{{numberProducts}}</span>
                     </a>
                 </li>
             </ul>
