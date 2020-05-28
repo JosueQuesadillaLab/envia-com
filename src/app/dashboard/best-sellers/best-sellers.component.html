@@ -11,7 +11,7 @@
             <p class="product-category"> Heather Grey </p>
             <p class="product-title"> {{ product.name }}</p>
             <p class="product-prize">$ {{ product.price}}</p>
-            <a [routerLink]="['/product', product.productId]" class="btn btn-black">
+            <a (click)="up()"[routerLink]="['/product', product.productId]" class="btn btn-black">
                 SHOP NOW
             </a>
         </div>
