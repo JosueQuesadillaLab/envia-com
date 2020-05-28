@@ -38,7 +38,6 @@ export class CartComponent implements OnInit , OnDestroy{
       filter ( dataorder => dataorder.data != null )
     ).subscribe(
       dataorder => {
-        // console.log(order);
         const { data } = dataorder;
         const { order } = data;
         const { id } = order;
@@ -91,8 +90,8 @@ export class CartComponent implements OnInit , OnDestroy{
 
     items.forEach(element => {
 
-      const { price } = element;
-      this.subtotal = this.subtotal + parseFloat(price);
+      const { price , quantity } = element;      
+      this.subtotal = this.subtotal + (parseFloat(price) * parseFloat(quantity));
 
     });
 

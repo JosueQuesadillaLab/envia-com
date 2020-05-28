@@ -19,6 +19,7 @@ import { BestSellersComponent } from './dashboard/best-sellers/best-sellers.comp
 import { BannerHomeComponent } from './dashboard/banner-home/banner-home.component';
 import { ProductComponent } from './dashboard/product/product.component';
 import { CartComponent } from './shared/cart/cart.component';
+import { PromotionsComponent } from './dashboard/promotions/promotions.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CartComponent } from './shared/cart/cart.component';
     BestSellersComponent,
     BannerHomeComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    PromotionsComponent
   ],
   imports: [
     BrowserModule,
