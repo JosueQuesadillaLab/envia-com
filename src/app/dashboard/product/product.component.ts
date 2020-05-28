@@ -16,7 +16,7 @@ import { filter } from 'rxjs/operators';
 export class ProductComponent implements OnInit , OnDestroy {
 
   id: string ; 
-  qty: number = 0 ;
+  qty: number = 1 ;
   productsList : Array<any>;
   product : any  = null ;
   itemsProducts : Array<any>;

@@ -635,6 +635,22 @@ body{
                 a{
                     color:$textdarkgreen;
                     cursor: pointer;
+                    position: relative;
+
+                    span{
+                        position: absolute;
+                        right: -10px;
+                        top: -5px;
+                        color: $textdarkgreen;
+                        font-size: 0.6em;
+                        display: block;
+                        line-height: 14px;
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 50% 50%;
+                        border: 1px solid $textdarkgreen;
+                        background-color: white;
+                    }
                 }
             }
         
